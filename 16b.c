@@ -1,3 +1,14 @@
+/*
+============================================================================
+Name : 16b.c
+Author : Samrith Gunjan Namdeo
+Description : Write a program to perform mandatory locking.
+              b. Implement read lock
+Date: 09th Sept, 2023.
+============================================================================
+*/
+
+
 #include <unistd.h>    
 #include <fcntl.h>     
 #include <sys/types.h> 

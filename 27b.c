@@ -1,22 +1,18 @@
 /*
 ============================================================================
-Name : 3.c
+Name : 27b.c
 Author : Samrith Gunjan Namdeo
-Description : Write a program to create a file and print the file descriptor value. Use creat ( ) system call
+Description : Write a program to execute ls -Rl by the following system calls
+              b. execlp
 Date: 09th Sept, 2023.
 ============================================================================
 */
 
-
 #include<stdio.h>
-#include<sys/types.h>
-#include<fcntl.h>
-int main()
-{
-	int fileDes = creat("FileDes1",O_RDWR);
+#include<unistd.h>
 
-	printf("%d",fileDes);
+int main(void) {
+	execlp("ls", "ls", "-R", "-l", NULL);
 
 	return 0;
 }
-

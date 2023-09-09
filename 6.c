@@ -1,3 +1,14 @@
+/*
+============================================================================
+Name : 6.c
+Author : Samrith Gunjan Namdeo
+Description : Write a program to take input from STDIN and display on STDOUT. Use only read/write system calls
+Date: 09th Sept, 2023.
+============================================================================
+*/
+
+
+
 #include<stdio.h>
 #include<fcntl.h>
 #include<unistd.h>

@@ -1,30 +1,33 @@
 /*
 ============================================================================
-Name : 4.c
+Name : 23.c
 Author : Samrith Gunjan Namdeo
-Description : Write a program to open an existing file with read write mode. Try O_EXCL flag also.
+Description : Write a program to create a Zombie state of the running program.
 Date: 09th Sept, 2023.
 ============================================================================
 */
 
 
-
-
 #include<stdio.h>
 #include<sys/types.h>
-#include<fcntl.h>
+#include<unistd.h>
+#include<stdlib.h>
 int main()
 {
-	int fileDes= open("FileDes1",O_CREAT|O_EXCL,0600);
-
-	if(fileDes<0)
+	if(!fork())
 	{
-		printf("Failed to Open");
-	}
+		printf("child( pid : %d ) Execution completed. Became ZOMBIIEE!!\n",getpid());
+		 exit(0);
+		}
 	else
 	{
-	printf("Open");
+		while(1)
+		{
+
+		}
+
 	}
-return 0;
+	return 0;
+
 }
 

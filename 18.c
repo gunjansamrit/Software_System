@@ -1,9 +1,23 @@
+/*
+============================================================================
+Name : 18.c
+Author : Samrith Gunjan Namdeo
+Description : Write a program to perform Record locking.
+              a. Implement write lock
+              b. Implement read lock
+              Create three records in a file. Whenever you access a particular record, first lock it then modify/access
+              to avoid race condition.
+Date: 09th Sept, 2023.
+============================================================================
+*/
+
+
 #include<fcntl.h>
 #include<unistd.h>
 #include<stdio.h>
 int main()
 {
-	int fd=open("ThreeTicket",O_EXCL|O_RDWR);
+	int fd=open("ThreeTicket",O_CREAT|O_RDWR);
 	printf("%d\n",fd);
 	struct flock lock;
 	int train=-1;
